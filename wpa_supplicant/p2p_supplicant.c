@@ -1352,6 +1352,8 @@ static void wpas_group_formation_completed(struct wpa_supplicant *wpa_s,
 			persistent = ssid->p2p_persistent_group;
 			os_memcpy(go_dev_addr, wpa_s->global->p2p_dev_addr,
 				  ETH_ALEN);
+      os_memcpy(wpa_s->go_dev_addr, wpa_s->global->p2p_dev_addr,
+                    ETH_ALEN);
 		} else
 			persistent = wpas_p2p_persistent_group(wpa_s,
 							       go_dev_addr,
